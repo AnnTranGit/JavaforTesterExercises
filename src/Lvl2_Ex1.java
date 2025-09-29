@@ -45,10 +45,15 @@ public class Lvl2_Ex1 {
 
         //tinh thue
         double taxAmount = income * taxRate;
+        double roundedTaxAmount = Math.round(taxAmount * 100.0) / 100.0;
+
 
         System.out.println("Thu nhập: " + income + " triệu");
         System.out.println("% Thuế: " + (taxRate * 100) + "%");
-        System.out.println("Số thuế phải trả: " + taxAmount + " triệu đồng");
+        System.out.println("Số thuế phải trả: " + roundedTaxAmount + " triệu");
+        System.out.println("Số thuế phải trả: " + taxAmount + " triệu");
+
+
 
 
     }
