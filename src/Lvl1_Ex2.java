@@ -23,21 +23,20 @@ public class Lvl1_Ex2 {
            return Integer.MIN_VALUE;
        }
 
-       for (int i = 0; i < arr.length; i++) {
-           int number = arr[i]; // gán num
+       // gán num
+       for (int number : arr)
+           if (number > max) { // duyệt từng số trong mảng, nếu number lớn hơn max
+               secondMax = max; // số lớn t2 bằng max ban đầu
+               max = number; // va cho max = số đó
 
-           if (number > max){ // duyệt từng số trong mảng, nếu lớn hơn max
-               max = number; //thì cho max = số đó
-              secondMax = max;  // số lớn t2 bằng max ban đầu
-           } else if (number > secondMax && number < max){ // in case nếu có số trùng với số lớn nhất trong mảng
+           } else if (number > secondMax && number < max) { // in case nếu có số trùng với số lớn nhất trong mảng
                secondMax = number;
            }
-       }
 
        return secondMax;
 
 
-   };
+   }
 
     public static void main(String[] args) {
         int[] arr1 = {1, 3, 4, 5, 0, 2};
