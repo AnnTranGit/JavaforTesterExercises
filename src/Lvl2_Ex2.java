@@ -15,8 +15,9 @@ public class Lvl2_Ex2 {
     // hàm kiểm tra xem một chuỗi có phải là palindrome
 
     public static boolean isPalindrome(String input) {
+        //su dung 2 pointers
         int left = 0;                  // index 0
-        int right = input.length() - 1;  // index cuoi
+        int right = input.length() - 1;  // index cuoi n length -1
 
         while (left < right){ //do until left >= right
             if (input.charAt(left) != input.charAt(right)) { //neu ki tu dau != ki tu cuoi > false luon
