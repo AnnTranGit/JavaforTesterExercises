@@ -13,7 +13,7 @@ Output: 5
 Input: [3]
 Output: Integer.MIN_VALUE*/
 
-public class Lvl1_Ex2 {
+public class SecondLargestNum_Lvl1_Ex2 {
    public static int secondLargestNum (int[] arr){
 
        int max = Integer.MIN_VALUE; // by default  gán giá trị nhỏ nhất cho sô lớn nhất

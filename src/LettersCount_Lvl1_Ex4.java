@@ -11,7 +11,7 @@ Input: "Hello World"
 Output: 2
 */
 
-public class Lvl1_Ex4 {
+public class LettersCount_Lvl1_Ex4 {
     public static void main(String[] args) {
         String str1 = "Xin chào các bạn";
         String str2 = "Hello World";

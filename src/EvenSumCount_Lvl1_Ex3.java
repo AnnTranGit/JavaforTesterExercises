@@ -10,7 +10,7 @@ Input: 5
 Output: 6
 */
 
-public class Lvl1_Ex3 {
+public class EvenSumCount_Lvl1_Ex3 {
 
     public static int sumCount (int x) {
 

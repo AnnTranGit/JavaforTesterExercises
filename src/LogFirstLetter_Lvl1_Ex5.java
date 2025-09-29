@@ -11,8 +11,8 @@ Input: "Hello World"
 Output: "H W"
 * */
 
-public class Lvl1_Ex5 {
-    public static String logFirstLetters(String input) {
+public class LogFirstLetter_Lvl1_Ex5 {
+    public static String logFirstLetter(String input) {
         String[] words = input.split(" ");
         String res = "";
 
@@ -26,8 +26,8 @@ public class Lvl1_Ex5 {
     }
 
     public static void main(String[] args) {
-        System.out.println(logFirstLetters("Xin Chào Các Bạn"));
-        System.out.println(logFirstLetters("Hello World"));
+        System.out.println(logFirstLetter("Xin Chào Các Bạn"));
+        System.out.println(logFirstLetter("Hello World"));
     }
 
 }

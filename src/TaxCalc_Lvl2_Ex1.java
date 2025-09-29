@@ -17,7 +17,7 @@ Yêu cầu:
 
 import java.util.Scanner;
 
-public class Lvl2_Ex1 {
+public class TaxCalc_Lvl2_Ex1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
