@@ -11,7 +11,7 @@ Input: "hello"
 Output: false
 * */
 
-public class Lvl2_Ex2 {
+public class CheckPalindromes_Lvl2_Ex2 {
     // hàm kiểm tra xem một chuỗi có phải là palindrome
 
     public static boolean isPalindrome(String input) {

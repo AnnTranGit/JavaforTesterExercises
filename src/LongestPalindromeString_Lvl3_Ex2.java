@@ -9,7 +9,7 @@ Output: "bab" (hoặc "aba"
 
 import java.util.ArrayList;
 
-public class Lvl3_Ex2 {
+public class LongestPalindromeString_Lvl3_Ex2 {
 
     // hàm kiểm tra xem một chuỗi có phải là palindrome
 

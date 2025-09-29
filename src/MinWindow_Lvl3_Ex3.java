@@ -11,7 +11,7 @@ Output: "BANC
 
 import java.util.HashMap;
 
-public class Lvl3_Ex3 {
+public class MinWindow_Lvl3_Ex3 {
     public static String minWindow(String main, String sub) {
         if (main.length() < sub.length()) return "";
 

@@ -9,7 +9,7 @@ Output: [1,2]
 
 import java.util.Arrays;
 
-public class Lvl3_Ex1 {
+public class TwoSum_Lvl3_Ex1 {
     public static int[] twoSum(int[] numArray, int target ) {
 
         int left = 0 ; //1st index
