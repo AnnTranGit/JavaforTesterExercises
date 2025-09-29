@@ -66,7 +66,7 @@ public class MinWindow_Lvl3_Ex3 {
     public static void main(String[] args) {
         String s = "COCOICHIBANYA";
         String t = "HBA";
-        System.out.println(minWindow(s, t)); // Output: "BANC"
+        System.out.println(minWindow(s, t));
     }
 
 }

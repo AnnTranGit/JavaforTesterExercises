@@ -15,12 +15,15 @@ public class LettersCount_Lvl1_Ex4 {
     public static void main(String[] args) {
         String str1 = "Xin chào các bạn";
         String str2 = "Hello World";
+        String str3 = "Welcome to Dubai, habibi";
 
         // Tách chuỗi theo khoảng trắng " "
         String[] arr1 = str1.split(" ");
         String[] arr2 = str2.split(" ");
+        String[] arr3 = str3.split(" ");
 
         System.out.println("Output 1: " + arr1.length);
         System.out.println("Output 2: " + arr2.length);
+        System.out.println("Output 3: " + arr3.length);
     }
 }

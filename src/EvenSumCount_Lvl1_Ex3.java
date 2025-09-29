@@ -30,6 +30,8 @@ public class EvenSumCount_Lvl1_Ex3 {
         int res2 = sumCount(5);
         System.out.println(res2);
 
+        int res3 = sumCount(2);
+        System.out.println(res3);
 
     }
 

@@ -18,43 +18,73 @@ Yêu cầu:
 import java.util.Scanner;
 
 public class TaxCalc_Lvl2_Ex1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Nhập thu nhập hàng năm từ người dùng");
-        int income = sc.nextInt();
+    public static double calculateTax(double income) {
+        double tax = 0;
 
-        double taxRate;
-
-        // 2. Xác định thuế suất theo mức thu nhập
         if (income <= 5) {
-            taxRate = 0.05;
+            tax = income * 0.05;
+            System.out.println("Bậc 1: " + income + " x 5% = " + tax);
         } else if (income <= 10) {
-            taxRate = 0.10;
+            tax = 5 * 0.05 + (income - 5) * 0.10;
+            System.out.println("Bậc 1: 5 x 5% = " + (5 * 0.05));
+            System.out.println("Bậc 2: " + (income - 5) + " x 10% = " + ((income - 5) * 0.10));
         } else if (income <= 18) {
-            taxRate = 0.15;
+            tax = 5 * 0.05 + 5 * 0.10 + (income - 10) * 0.15;
+            System.out.println("Bậc 1: 5 x 5% = " + (5 * 0.05));
+            System.out.println("Bậc 2: 5 x 10% = " + (5 * 0.10));
+            System.out.println("Bậc 3: " + (income - 10) + " x 15% = " + ((income - 10) * 0.15));
         } else if (income <= 32) {
-            taxRate = 0.20;
+            tax = 5 * 0.05 + 5 * 0.10 + 8 * 0.15 + (income - 18) * 0.20;
+            System.out.println("Bậc 1: 5 x 5% = " + (5 * 0.05));
+            System.out.println("Bậc 2: 5 x 10% = " + (5 * 0.10));
+            System.out.println("Bậc 3: 8 x 15% = " + (8 * 0.15));
+            System.out.println("Bậc 4: " + (income - 18) + " x 20% = " + ((income - 18) * 0.20));
         } else if (income <= 52) {
-            taxRate = 0.25;
+            tax = 5 * 0.05 + 5 * 0.10 + 8 * 0.15 + 14 * 0.20 + (income - 32) * 0.25;
+            System.out.println("Bậc 1: 5 x 5% = " + (5 * 0.05));
+            System.out.println("Bậc 2: 5 x 10% = " + (5 * 0.10));
+            System.out.println("Bậc 3: 8 x 15% = " + (8 * 0.15));
+            System.out.println("Bậc 4: 14 x 20% = " + (14 * 0.20));
+            System.out.println("Bậc 5: " + (income - 32) + " x 25% = " + ((income - 32) * 0.25));
         } else if (income <= 80) {
-            taxRate = 0.30;
+            tax = 5 * 0.05 + 5 * 0.10 + 8 * 0.15 + 14 * 0.20 + 20 * 0.25 + (income - 52) * 0.30;
+            System.out.println("Bậc 1: 5 x 5% = " + (5 * 0.05));
+            System.out.println("Bậc 2: 5 x 10% = " + (5 * 0.10));
+            System.out.println("Bậc 3: 8 x 15% = " + (8 * 0.15));
+            System.out.println("Bậc 4: 14 x 20% = " + (14 * 0.20));
+            System.out.println("Bậc 5: 20 x 25% = " + (20 * 0.25));
+            System.out.println("Bậc 6: " + (income - 52) + " x 30% = " + ((income - 52) * 0.30));
         } else {
-            taxRate = 0.35;
+            tax = 5 * 0.05 + 5 * 0.10 + 8 * 0.15 + 14 * 0.20 + 20 * 0.25 + 28 * 0.30 + (income - 80) * 0.35;
+            System.out.println("Bậc 1: 5 x 5% = " + (5 * 0.05));
+            System.out.println("Bậc 2: 5 x 10% = " + (5 * 0.10));
+            System.out.println("Bậc 3: 8 x 15% = " + (8 * 0.15));
+            System.out.println("Bậc 4: 14 x 20% = " + (14 * 0.20));
+            System.out.println("Bậc 5: 20 x 25% = " + (20 * 0.25));
+            System.out.println("Bậc 6: 28 x 30% = " + (28 * 0.30));
+            System.out.println("Bậc 7: " + (income - 80) + " x 35% = " + ((income - 80) * 0.35));
         }
 
-        //tinh thue
-        double taxAmount = income * taxRate;
-        double roundedTaxAmount = Math.round(taxAmount * 100.0) / 100.0;
-
-
-        System.out.println("Thu nhập: " + income + " triệu");
-        System.out.println("% Thuế: " + (taxRate * 100) + "%");
-        System.out.println("Số thuế phải trả: " + roundedTaxAmount + " triệu");
-        System.out.println("Số thuế phải trả: " + taxAmount + " triệu");
-
-
-
-
+        return tax;
     }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // nhập thu nhập hàng năm
+        System.out.println("Nhập thu nhập hàng năm (triệu đồng): ");
+        double income = scanner.nextDouble();
+
+        System.out.println("Số thuế phải trả theo từng mức thuế suất: ");
+
+        double tax = calculateTax(income);
+        double roundedTaxAmount = Math.round(tax * 100.0) / 100.0;
+
+        System.out.println("Tổng số thuế phải trả: " + tax + " triệu");
+        System.out.println("Tổng số thuế phải trả (làm tròn): " + roundedTaxAmount + " triệu");
+
+        scanner.close();
+    }
+
 }
